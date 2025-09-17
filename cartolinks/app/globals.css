@@ -1,0 +1,42 @@
+/* app/styles/globals.css */
+@import "tailwindcss"; /* v4 single import */
+
+:root {
+  --bg-r: 255 255 255;
+  --text-r: 17 24 39;
+  --muted-r: 107 114 128;
+  color-scheme: light;
+}
+
+.dark {
+  --bg-r: 15 23 42;
+  --text-r: 241 245 249;
+  --muted-r: 148 163 184;
+  color-scheme: dark;
+}
+
+
+/* simple helpers that use the CSS vars */
+body {
+  @apply antialiased min-h-screen;
+  background-color: rgb(var(--bg-r));
+  color: rgb(var(--text-r));
+}
+
+/* example util classes (optional) */
+.text-muted { color: rgb(var(--muted-r)); }
+
+.middle-icon{
+  padding: 5px;
+  border-radius: 6px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.middle-icon:hover{
+  background-color: whitesmoke;
+
+}
