@@ -1,6 +1,7 @@
 /* app/styles/globals.css */
 @import "tailwindcss"; /* v4 single import */
 
+
 :root {
   --bg-r: 255 255 255;
   --text-r: 17 24 39;
@@ -37,6 +38,55 @@ body {
 }
 
 .middle-icon:hover{
-  background-color: whitesmoke;
+  background-color: white;
 
 }
+
+.dark .logo{
+  background-color: white;
+  border-radius: 100% ;
+  border: none;
+  outline: none;
+}
+
+.dark .avatar{
+  background-color: white;
+  border-radius: 100% ;
+  border: none;
+  outline: none;
+}
+.dark .icon{
+  background-color: white;
+  border-radius: 100% ;
+  border: none;
+  outline: none;
+}
+
+.img-grad{
+  background-image: linear-gradient( 270deg, rgb(236, 236, 236), rgb(168, 168, 168));
+}
+
+.video-grad{
+  background-image: linear-gradient( 90deg, rgb(247, 190, 5), rgb(247, 190, 50));
+}
+
+.real-grad{
+  background-image: linear-gradient( 180deg, rgb(32, 197, 247), rgb(228, 225, 225));
+}
+
+.enhance-grad{
+  background-image: linear-gradient( 180deg, rgb(235, 66, 66), rgb(228, 223, 223));
+}
+
+.edit-grad{
+  background-image: linear-gradient( 180deg, rgb(29, 28, 28), rgb(94, 4, 94), rgb(216, 214, 214));
+}
+
+.lip-grad{
+  background-image: linear-gradient( 270deg, rgb(251, 255, 0), rgb(226, 240, 38));
+}
+.motion-grad{
+  background-image: linear-gradient( 270deg, rgb(90, 236, 54), rgb(230, 241, 62));
+}
+
+

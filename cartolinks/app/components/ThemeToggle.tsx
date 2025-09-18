@@ -30,7 +30,7 @@ export default function ThemeToggle(){
         <button 
         onClick={()=> setIsDark(d => !d)}
         aria-pressed={isDark}
-        className="px-1 py-1 border rounded cursor-pointer"
+        className="px-1 py-1 border rounded-full cursor-pointer"
         >
             { isDark ? <Image src={"/light-svgrepo-com.svg"} alt={"light mode"}width={20} height={20} />:
             <Image src={"/crescent-moon-phase-svgrepo-com.svg"} alt={"dark mode"} width={20} height={20}/>}
