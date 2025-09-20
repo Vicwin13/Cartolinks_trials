@@ -89,4 +89,23 @@ body {
   background-image: linear-gradient( 270deg, rgb(90, 236, 54), rgb(230, 241, 62));
 }
 
+.title{
+  background-image: linear-gradient(180deg, white, white, white, rgb(65, 63, 63));
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  
+}
 
+.embla{
+  /* overflow: hidden; */
+  border: 0px;
+}
+
+.embla__container{
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}

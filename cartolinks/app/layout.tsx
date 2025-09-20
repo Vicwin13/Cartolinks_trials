@@ -2,6 +2,7 @@ import "./globals.css";
 
 import { Geist, Geist_Mono } from "next/font/google";
 
+import Footer from "./components/footer";
 import type { Metadata } from "next";
 import Script from "next/script";
 
@@ -55,9 +56,13 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen `}
       >
+        <main className="flex-grow">
+
         {children}
+        </main>
+        <Footer/>
       </body>
     </html>
   );
