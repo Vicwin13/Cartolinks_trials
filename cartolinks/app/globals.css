@@ -28,7 +28,7 @@ body {
 .text-muted { color: rgb(var(--muted-r)); }
 
 .middle-icon{
-  padding: 5px;
+  padding: 8px;
   border-radius: 6px;
   width: 35px;
   display: flex;
@@ -108,4 +108,59 @@ body {
 .embla__slide {
   flex: 0 0 100%;
   min-width: 0;
+}
+
+
+
+.slides{
+  padding: 0 8px;
+}
+
+.dropdown{
+ border: 2px solid rgb(69, 69, 201);
+ border-radius: 100%;
+ top: 10px;
+ background-color: white;
+ display: none;
+}
+
+
+
+@media (width >= 860px) {
+  #mobile-nav{
+    display: none;
+  }
+}
+
+@media (width <= 860px) {
+  .home-nav{
+    display: none;
+    
+  }
+  .dropdown{
+    display: block;
+  }
+ 
+
+  .avatar-user, .icon-avt{
+    display: none;
+  }
+
+  .logo-div{
+    border-radius: 100%;
+  }
+  .gallery, .support{
+    display: none;
+  }
+}
+
+@media (width <= 525px) {
+  .carousel-slide{
+    width: 18rem;
+  }
+
+  .slides{
+    padding-right: 1px;
+  }
+
 }

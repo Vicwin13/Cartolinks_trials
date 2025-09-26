@@ -1,5 +1,7 @@
 'use client';
 
+import * as motion from 'motion/react-client'
+
 import { useEffect, useState } from "react";
 
 import Image from "next/image";
@@ -27,14 +29,18 @@ export default function ThemeToggle(){
 
     return(
         <>
-        <button 
+        <motion.button 
         onClick={()=> setIsDark(d => !d)}
+        whileHover={{scale: 1.1}}
+        whileTap={{scale: 0.9}}
+        transition={{ease: ["easeIn", "easeOut"]}}
         aria-pressed={isDark}
         className="px-1 py-1 border rounded-full cursor-pointer"
+        
         >
             { isDark ? <Image src={"/light-svgrepo-com.svg"} alt={"light mode"}width={20} height={20} />:
             <Image src={"/crescent-moon-phase-svgrepo-com.svg"} alt={"dark mode"} width={20} height={20}/>}
-        </button>
+        </motion.button>
         
        
             </>

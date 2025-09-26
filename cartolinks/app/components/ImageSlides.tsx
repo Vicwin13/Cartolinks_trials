@@ -1,3 +1,5 @@
+import * as motion from 'motion/react-client'
+
 import React from 'react'
 
 interface ImageSlidesProps{
@@ -26,7 +28,7 @@ const ImageSlides = ({
 }:ImageSlidesProps) => {
   return (
     <>
-<div className='bg-cover p-3 w-[40rem] mx-auto h-[18rem] rounded-2xl text-teal-50 relative  border bg-no-repeat'
+<div className='bg-cover p-3 w-[30rem] md:w-[48rem] mx-auto h-[18rem] carousel-slide rounded-2xl text-teal-50 relative  bg-no-repeat'
      style={{
         backgroundImage: `url(${image})`
      }}>
@@ -45,15 +47,19 @@ const ImageSlides = ({
         <div className='relative z-10 h-full '>
 
                 <p className='absolute top-0 left-0 text-xs font-light'>{model}</p>
-                <h1 className=' title text-6xl font-black absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2'>{title}</h1>
+                <h1 className=' title text-3xl md:text-6xl font-black absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 break-keep'>{title}</h1>
 
-            <div className='flex absolute bottom-0 items-end w-full  justify-between '>
+            <div className='flex absolute bottom-0 items-end w-full justify-between '>
                 
                 <div className=' w-[25rem]'>
                     <h2 className='font-bold text-xl'>{heading}</h2>
                     <p className='leading-tight text-sm'>{textDesc}</p>
                 </div>
-                <button className='border-0 rounded-3xl w-[10rem] cursor-pointer bg-white text-black text-sm py-2 px-4'>{button}</button>
+                <motion.button
+                 whileHover={{scale:1.1}}
+                 transition={{type: "spring",ease:['easeIn','easeOut']}}
+                className='border-0 rounded-3xl w-[5rem] sm:w-[8rem]  cursor-pointer bg-white text-black text-xs sm:text-sm py-2 px-4'
+                >{button}</motion.button>
             </div>
         </div>
     </div>

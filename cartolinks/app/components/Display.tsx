@@ -15,7 +15,7 @@ const Display = () => {
 
          <Carousel/>
 
-        <div className='grid justify-center items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2'>
+        <div className='grid justify-baseline w-fit mx-auto  items-start grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pb-4 gap-2'>
 
             <Card 
             title="Image" 
@@ -44,6 +44,7 @@ const Display = () => {
             imageAlt='realtime  icon'
             open='Open'
             className='real-grad'
+            status='New'
             
             />
 
@@ -86,7 +87,7 @@ const Display = () => {
             imageSrc='\surrender-give-up-throw-hands-up-in-the-air-give-in-svgrepo-com.svg'
             imageAlt='motion icon'
             open='Open'
-            status='New'
+            
             className='motion-grad'
             
             />

@@ -1,5 +1,7 @@
 'use client'
 
+import * as motion from "motion/react-client"
+
 import Image from 'next/image'
 import React from 'react'
 
@@ -26,7 +28,7 @@ export const Card = ({
   return (
     <>
     
-    <div className=' flex gap-4 items-center  w-fit py-2.5'>
+    <div className=' flex gap-4 items-center justify-center w-[100%]  mx-auto py-2.5'>
         <div className={`px-2 py-1 rounded-lg bg-white w-fit ${className}`}>
 
         <Image src={imageSrc} alt={imageAlt} width={30} height={30}/>
@@ -42,7 +44,16 @@ export const Card = ({
                 {description}
             </p>
         </div>
-        <button className='bg-gray-200 px-5 text-sm font-medium text-[#131212] py-1 rounded-2xl'>{open}</button>
+        <motion.button
+        whileHover={{scale:1.1}}
+        whileTap={{scale: 0.90}}
+        
+        transition={{type: "tween", ease: "easeOut"}}
+        className='bg-gray-200 hover:bg-gray-300 px-5 text-sm font-medium text-[#131212] cursor-pointer py-1 rounded-2xl'
+        >
+
+        {open}
+        </motion.button>
     </div>
     
     </>

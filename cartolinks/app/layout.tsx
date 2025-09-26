@@ -21,7 +21,6 @@ export const metadata: Metadata = {
   description: "Single Page Website for Trial",
 };
 
-
 const themeInit = `
 (function() {
   try {
@@ -40,7 +39,7 @@ const themeInit = `
     }
   } catch (e) {}
 })();
-`
+`;
 
 
 export default function RootLayout({
@@ -52,17 +51,14 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script id="theme-init" strategy="beforeInteractive">
-            {themeInit}
+          {themeInit}
         </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen `}
       >
-        <main className="flex-grow">
-
-        {children}
-        </main>
-        <Footer/>
+        <main className="flex-grow px-2 sm:px-6">{children}</main>
+        <Footer />
       </body>
     </html>
   );
