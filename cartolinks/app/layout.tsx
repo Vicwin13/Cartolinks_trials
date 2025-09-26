@@ -1,3 +1,5 @@
+import React from "react";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 import { Geist, Geist_Mono } from "next/font/google";
@@ -57,8 +59,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen `}
       >
-        <main className="flex-grow px-2 sm:px-6">{children}</main>
+        <main className="flex-grow px-2 sm:px-6">
+          {children}
+          
+          </main>
         <Footer />
+        <Analytics/>
       </body>
     </html>
   );
